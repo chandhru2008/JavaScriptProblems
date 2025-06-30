@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+<div id="window-size"></div>
+</body>
+
+</html>
+<script>
+    function findBrowserWindowSize() {
+        let width = window.innerWidth;
+        let height = window.innerHeight;
+        console.log("Window browser widht : ", width);
+        console.log("Window browser height : ", height);
+        return "Window browser widht : " + width + ",  Window browser height : " + height
+    }
+
+   const windowSize =  findBrowserWindowSize();
+   document.getElementById('window-size').innerHTML=`<p>${windowSize}</p>`
+</script>
