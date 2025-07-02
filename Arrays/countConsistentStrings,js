@@ -1,0 +1,25 @@
+var countConsistentStrings = function (allowed, words) {
+    let obj = {};
+    for (let c of allowed) {
+        if (!obj[c]) {
+            obj[c] = true;
+        }
+    }
+    let count = 0;
+    for (let i = 0; i < words.length; i++) {
+
+        let checkWordExits = true;
+        for (let c of words[i]) {
+            if (!obj[c]) {
+                checkWordExits = false;
+                break;
+            }
+        }
+        if (checkWordExits) {
+            count++;
+        }
+    }
+    return count;
+};
+
+console.log(countConsistentStrings('ab', ["ad","bd","aaab","baa","badab"]));
